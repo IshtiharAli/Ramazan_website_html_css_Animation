@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap');
+
+
+*{
+    font-family: 'Work Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li , a{
+    list-style: none;
+    text-decoration: none;
+}
+
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header .logo{
+    position: relative;
+    color: #d33838;
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 700;
+    transition: .5s;
+
+    /* animation */
+    opacity: 0;
+    animation: slide_left 0.5s linear forwards;
+    animation-delay: .2s;
+}
+
+header .logo:hover{
+    color: #d39038;
+}
+
+
+header ul{
+    position: relative;
+    display: flex;
+}
+
+header ul li a{
+    display: inline-block;
+    color: #d33838;
+    background: #fff;
+    box-shadow: 1px 1px 5px rgba(0, 0,0, 0.2);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-left: 10px;
+    padding: 8px 18px;
+    text-decoration: none;
+    user-select: none;
+    border-radius: 2rem;
+
+     /* animation */
+     opacity: 0;
+     animation: slide_top 0.5s linear forwards;
+     animation-delay: calc(.2s * var(--i));
+
+}
+
+header ul li a.active,
+header ul li a:hover{
+    background: #d33838;
+    color: #fff;
+}
+
+.textbox{
+    position: relative;
+    max-width: 550px;
+}
+
+.textbox h2{
+    color: #d39038;
+    font-weight: 700;
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+
+    /* animation */
+     opacity: 0;
+     animation: slide_right 0.5s linear forwards;
+     animation-delay: 1s;
+}
+
+.textbox p{
+    font-size: 1.2rem;
+    color: #333;
+
+    /* animation */
+     opacity: 0;
+     animation: slide_right 0.5s linear forwards;
+     animation-delay:1.5s;
+}
+
+.textbox a{
+    padding: 15px 30px;
+    background: #d33838;
+    color: #fff;
+    display: inline-block;
+    margin-top: 20px;
+    word-spacing: 1px;
+    border-radius: 2rem;
+    transition: .5s;
+
+    /* animation */
+     opacity: 0;
+     animation: slide_top 0.5s linear forwards;
+     animation-delay: 2s;
+}
+
+.textbox a:hover{
+    background: #d39038;
+}
+
+
+
+
+/* ======================= Social icons======================= */
+
+.social{
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.social li a{
+    position: relative;
+    display: inline-block;
+    margin-left: 15px;
+    width: 50px;
+    height: 50px;
+    font-weight: 700;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:#d33838;
+    border-radius: 50%;
+    transition: .5s ease-in-out;
+
+    /* animation */
+     opacity: 0;
+     animation: slide_right 0.5s linear forwards;
+     animation-delay: calc(.2s * var(--i));
+}
+
+.social li a:hover{
+    background: #d39038;
+    transform: translateY(-10px);
+}
+
+.social li a ion-icon{
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+
+/* ---------------image part-------------------------- */
+
+.main-img{
+    position: absolute;
+    right: 0;
+    height: 70%;
+    margin-right: 80px;
+    width: auto;
+    border-radius: 50px;
+    margin-top: 120px; 
+}
+
+
+/* okay lets Animate this  */
+
+@keyframes slide_left{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+
+@keyframes slide_right{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+
+@keyframes slide_top{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+@keyframes fide_in{
+    0%{
+        
+        opacity: 0;
+    }
+
+    100%{
+       
+        opacity: 1;
+    }
+}
+
+
+
+
+
